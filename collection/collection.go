@@ -144,7 +144,7 @@ func (d *Documentation) build() {
 
 // buildSubChildItems builds all the sub folder collections
 func (d *Documentation) buildSubChildItems(itm Item, c *Collection, pn string) bool {
-	if itm.IsSubFolder {
+	if len(itm.Items) > 0 {
 		collection := Collection{}
 		collection.Name = pn + "/" + itm.Name
 		collection.IsSubFolder = true
@@ -179,7 +179,7 @@ func (d *Documentation) SortCollections() {
 	}
 }
 
-//removeEmptyCollections removes any empty collection
+// removeEmptyCollections removes any empty collection
 func (d *Documentation) removeEmptyCollections() {
 	for i := 0; i < len(d.Collections); i++ {
 		if len(d.Collections[i].Items) == 0 {
@@ -191,7 +191,7 @@ func (d *Documentation) removeEmptyCollections() {
 	return
 }
 
-//removeEmptyCollections removes disabled field from request
+// removeEmptyCollections removes disabled field from request
 func (d *Documentation) removeItemRequestDisabledField() {
 	for i, c := range d.Collections {
 		for j, _ := range c.Items {
@@ -224,7 +224,7 @@ func (d *Documentation) removeItemRequestDisabledField() {
 	return
 }
 
-//removeItemResponseRequestDisabledField removes disabled field from response originalRequest
+// removeItemResponseRequestDisabledField removes disabled field from response originalRequest
 func (d *Documentation) removeItemResponseRequestDisabledField() {
 	for i, c := range d.Collections {
 		for j, item := range c.Items {

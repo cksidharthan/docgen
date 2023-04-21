@@ -9,9 +9,9 @@ import (
 	"os"
 	"text/template"
 
+	"github.com/cksidharthan/docgen/collection"
+	"github.com/cksidharthan/docgen/update"
 	"github.com/spf13/cobra"
-	"github.com/thedevsaddam/docgen/collection"
-	"github.com/thedevsaddam/docgen/update"
 )
 
 const logo = `
@@ -23,7 +23,7 @@ const logo = `
 |_____/ \___/ \___|  \_____|\___|_| |_|
 
 Generate API documentation from Postman JSON collection
-For more info visit: https://github.com/thedevsaddam/docgen
+For more info visit: https://github.com/cksidharthan/docgen
 `
 
 var (
