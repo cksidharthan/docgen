@@ -4,7 +4,7 @@ package main
 
 import (
 	"fmt"
-	"github.com/thedevsaddam/docgen/cmd"
+	"github.com/cksidharthan/docgen/cmd"
 )
 
 func main() {

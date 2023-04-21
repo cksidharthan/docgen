@@ -44,7 +44,7 @@ func (r *ReleaseInfo) getDownloadURL(name string) string {
 
 // fetchReleaseInfo return githublatest release info
 func fetchReleaseInfo(ctx context.Context) (*ReleaseInfo, error) {
-	url := "https://api.github.com/repos/thedevsaddam/docgen/releases/latest"
+	url := "https://api.github.com/repos/cksidharthan/docgen/releases/latest"
 	ctx, cancel := context.WithTimeout(ctx, 3*time.Second)
 	defer cancel()
 	req, err := http.NewRequestWithContext(ctx, http.MethodGet, url, nil)

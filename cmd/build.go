@@ -3,8 +3,8 @@ package cmd
 import (
 	"os"
 
+	"github.com/cksidharthan/docgen/collection"
 	"github.com/spf13/cobra"
-	"github.com/thedevsaddam/docgen/collection"
 )
 
 var (
