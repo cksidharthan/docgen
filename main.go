@@ -3,9 +3,13 @@
 package main
 
 import (
+	"fmt"
 	"github.com/thedevsaddam/docgen/cmd"
 )
 
 func main() {
-	cmd.Execute()
+	err := cmd.Execute()
+	if err != nil {
+		fmt.Println("error running docgen: ", err)
+	}
 }

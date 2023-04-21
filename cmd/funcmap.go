@@ -125,7 +125,6 @@ func color(v string) string {
 		return "danger"
 	default:
 		return "info"
-
 	}
 }
 
